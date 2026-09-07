@@ -1,24 +1,26 @@
 
 import './Board.css'
+import Square from './Square/Square'
 export default function Board() {
+
+  
   return (
     <>
       <div>
-        <button className='square'></button>
-        <button className='square'></button>
-        <button className='square'></button>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
       </div>
       <div>
-        <button className='square'></button>
-        <button className='square'></button>
-        <button className='square'></button>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
       </div>
       <div>
-        <button className='square'></button>
-        <button className='square'></button>
-        <button className='square'></button>
+        <Square></Square>
+        <Square></Square>
+        <Square></Square>
       </div>
-
     </>
   )
 } 
