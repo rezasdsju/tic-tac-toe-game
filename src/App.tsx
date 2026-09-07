@@ -1,27 +1,11 @@
 
 import './App.css'
+import Board from './Board/Board'
 
-export default function Square() {
+function App(){
   return (
-    <>
-      <div>
-        <button className='square'>X</button>
-        <button className='square'>X</button>
-        <button className='square'>X</button>
-      </div>
-      <div>
-        <button className='square'>X</button>
-        <button className='square'>X</button>
-        <button className='square'>X</button>
-      </div>
-      <div>
-        <button className='square'>X</button>
-        <button className='square'>X</button>
-        <button className='square'>X</button>
-      </div>
-
-    </>
+    <Board></Board>
   )
-} 
+}
 
-
+export default App;
