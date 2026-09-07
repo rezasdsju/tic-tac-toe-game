@@ -1,25 +1,6 @@
 
 import './Square.css'
-export default function Square(){
+export default function Square({value}:{value:number}){
 
-  return (
-    <>
-      <div>
-        <button className='square'></button>
-        <button className='square'></button>
-        <button className='square'></button>
-      </div>
-      <div>
-        <button className='square'></button>
-        <button className='square'></button>
-        <button className='square'></button>
-      </div>
-      <div>
-        <button className='square'></button>
-        <button className='square'></button>
-        <button className='square'></button>
-      </div>
-
-    </>
-  )    
+  return <button className='square'>{value}</button>
 }
