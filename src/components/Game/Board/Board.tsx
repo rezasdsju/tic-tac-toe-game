@@ -1,11 +1,15 @@
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import './Board.css'
 import Square from './Square/Square'
 import calculateWinnner from './Winner/Winner'
-export default function Board() {
-  const [squares, setSquares] = useState<('X' | 'O' | null)[]>(Array(9).fill(null))
-  const [xIsNext, setXIsNext] = useState<boolean>(true)
+
+
+export default function Board({xIsNext, squares, onPlay}: {
+  xIsNext: boolean
+  squares: ('X' | 'O' | null)[]
+  onPlay: (nextSquares: ('X' | 'O' | null)[]) => void
+}) {
 
     const winner = calculateWinnner({ squares })
     let status;
@@ -16,7 +20,7 @@ export default function Board() {
     }
   const handleClick = (i: number): void => {
     
-    if (squares[i]) {
+    if (calculateWinnner({squares}) || squares[i]) {
       return
     }
 
@@ -28,8 +32,8 @@ export default function Board() {
     } else {
       nextSquares[i] = 'O'
     }
-    setSquares(nextSquares)
-    setXIsNext(!xIsNext)
+    onPlay(nextSquares)
+    // setXIsNext(!xIsNext)
 
 
     
